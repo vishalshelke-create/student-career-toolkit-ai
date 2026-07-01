@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Career Toolkit AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-graduation-cap"></i> Toolkit<span>AI</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#cgpa" class="active"><i class="fa-solid fa-calculator"></i> CGPA</a></li>
+                <li><a href="#tracker"><i class="fa-solid fa-briefcase"></i> Tracker</a></li>
+                <li><a href="#resume"><i class="fa-solid fa-file-invoice"></i> Resume</a></li>
+                <li><a href="#interview"><i class="fa-solid fa-comments"></i> Interview</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        
+        <header class="hero">
+            <h1>Supercharge Your <span>Engineering Career</span></h1>
+            <p>Calculate your grades, track elite tech internships, optimize your resume, and ace technical interviews—all in one intelligent platform.</p>
+        </header>
+
+        <section id="cgpa" class="dashboard-card active-section">
+            <div class="card-header">
+                <h2><i class="fa-solid fa-calculator text-gradient"></i> CGPA & SGPA Calculator</h2>
+                <p>Add your semesters or individual course credits to project your final graduation score.</p>
+            </div>
+            
+            <div class="cgpa-layout">
+                <div class="calculator-form">
+                    <div id="course-rows">
+                        </div>
+                    <button id="add-course-btn" class="btn btn-secondary">
+                        <i class="fa-solid fa-plus"></i> Add Course
+                    </button>
+                </div>
+                
+                <div class="calculator-result">
+                    <h3>Estimated Score</h3>
+                    <div class="score-display">0.00</div>
+                    <p class="score-status">Enter your grades to calculate your technical profile strength.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="tracker" class="dashboard-card">
+            <div class="card-header">
+                <h2><i class="fa-solid fa-briefcase text-gradient"></i> Internship Application Tracker</h2>
+                <p>Keep precise track of your open applications, coding assessments, and interview pipelines.</p>
+            </div>
+
+            <form id="tracker-form" class="tracker-inputs">
+                <input type="text" id="company-name" placeholder="Company Name (e.g., Google)" required>
+                <input type="text" id="role-title" placeholder="Role (e.g., Software Engineering Intern)" required>
+                <select id="app-status">
+                    <option value="Applied">Applied</option>
+                    <option value="OA / Assessment">OA / Online Assessment</option>
+                    <option value="Interviewing">Interviewing</option>
+                    <option value="Offered">Offer Received 🎉</option>
+                    <option value="Rejected">Rejected</option>
+                </select>
+                <button type="submit" class="btn btn-primary">Add Application</button>
+            </form>
+
+            <div class="table-responsive">
+                <table class="tracker-table">
+                    <thead>
+                        <tr>
+                            <th>Company</th>
+                            <th>Role</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tracker-list">
+                        </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="resume" class="dashboard-card">
+            <div class="card-header">
+                <h2><i class="fa-solid fa-file-invoice text-gradient"></i> Resume Improvement Matrix</h2>
+                <p>Actionable criteria targeting ATS optimization and strict core engineering readability standards.</p>
+            </div>
+            
+            <div class="grid-layout">
+                <div class="tips-card">
+                    <div class="tips-icon"><i class="fa-solid fa-bolt"></i></div>
+                    <h3>Core Technical Focus</h3>
+                    <p>Dedicate clear standalone structures to <strong>Problem Solving & Data Structures</strong>. List foundational arrays, strings, stacks, and queues to pass standard evaluation guardrails instantly.</p>
+                </div>
+                <div class="tips-card">
+                    <div class="tips-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3>Quantify Engineering Impact</h3>
+                    <p>Do not just state what you built. Use the standard metric rule: <em>"Accomplished [X], as measured by [Y], by implementing [Z]"</em> (e.g., Optimized face detection pipeline throughput by 22%).</p>
+                </div>
+                <div class="tips-card">
+                    <div class="tips-icon"><i class="fa-solid fa-layer-group"></i></div>
+                    <h3>Clean One-Page Architecture</h3>
+                    <p>Keep layout formatting purely linear. Avoid multi-column graphics tables that easily compromise parsing structures inside old-school corporate ATS systems.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="interview" class="dashboard-card">
+            <div class="card-header">
+                <h2><i class="fa-solid fa-comments text-gradient"></i> Technical Interview Accelerator</h2>
+                <p>Master standard core computer science conceptual check-points frequently asked in engineering panels.</p>
+            </div>
+
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-trigger">
+                        <span>How do you handle algorithmic trade-offs between HashMaps and Balanced Binary Search Trees?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>HashMaps provide an average time complexity of $O(1)$ for insertion and lookup operations, making them incredibly fast. However, they do not maintain data order and can degrade to $O(n)$ if multiple hash collisions occur. Balanced Trees (like Red-Black Trees) guarantee predictable $O(\log n)$ performance and keep keys sorted, which is essential for range queries.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-trigger">
+                        <span>What is the practical distinction between a Turing Machine and a Finite Automaton?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>A Finite Automaton has strictly limited, finite memory capacity restricted solely to its current state configurations. A Turing Machine possesses infinite read/write tape capability acting as unbounded memory storage, allowing it to transition backward/forward and cleanly simulate any computable algorithmic logic structure completely.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-trigger">
+                        <span>Explain how the Singleton pattern might introduce issues in concurrent applications.</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>If multiple threads attempt to access the uninitialized instance block simultaneously without synchronization, separate objects can be instantiated in memory concurrently. This breaks the fundamental pattern integrity unless protected by explicit thread-safe double-checked locking protocols or lazy container wrappers.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Student Career Toolkit AI. Built for Next-Gen Engineers.</p>
+    </footer>
+
+    <script>
+        window.MathJax = {
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
